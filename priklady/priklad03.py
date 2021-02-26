@@ -7,6 +7,6 @@ volnePokoje = {
 hodina = input("Zadej hodinu pro rezervaci zasedačky: ")
 hodina = int(hodina)
 if hodina in volnePokoje:
-    print(f"V {hodina} hod. jsou k dispozici tyto zasedačky: {volnePokoje[hodina]}.")
+    print(f"Počet zasedaček k dispozici: {len(volnePokoje[hodina])}")
 else:
     print("Zasedačku je možné rezervovat jen v 9, 10, 11 a 12 hod.")
