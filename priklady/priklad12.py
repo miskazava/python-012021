@@ -21,6 +21,10 @@ auto1 = Auto("4A2 3020", "Peugeot", "403 Cabrio", 47534)
 auto2 = Auto("1P3 4747", "Škoda", "Octavia", 41253)
 
 znacka = input("Zadej značku auta, o kterou máš zájem (Peugeot/Škoda): ")
-print(auto2.get_info())
-print(auto2.pujc_auto())
-print(auto2.pujc_auto())
+if znacka == "Peugeot":
+    auto = auto1
+if znacka == "Škoda":
+    auto = auto2
+print(auto.get_info())
+print(auto.pujc_auto())
+print(auto.pujc_auto())
