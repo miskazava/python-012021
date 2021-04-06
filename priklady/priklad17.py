@@ -15,7 +15,8 @@ class Film(Polozka):
         self.delka = int(delka)
 
     def get_info(self):
-        return self.nazev, self.zanr, self.delka
+        super().get_info()
+        return super().get_info() + f", délka: {self.delka}"
 
     def get_celkova_delka(self):
         celkova_delka = int(self.delka)
@@ -25,11 +26,12 @@ class Serial(Polozka):
 
     def __init__(self, nazev, zanr, pocetEpizod, delkaEpizody):
         super().__init__(nazev, zanr)
-        self.pocetEpizod = int(pocetEpizod)
-        self.delkaEpizody = int(delkaEpizody)
+        self.pocetEpizod = pocetEpizod
+        self.delkaEpizody = delkaEpizody
 
     def get_info(self):
-        return self.nazev, self.zanr, self.pocetEpizod, self.delkaEpizody
+        super().get_info()
+        return super().get_info() + f"počet epizod: {self.pocetEpizod}, délka epizódy: {self.delkaEpizody}"
 
     def get_celkova_delka(self):
         celkova_delka = self.pocetEpizod * self.delkaEpizody
